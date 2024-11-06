@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">example_navbar</string>
+    <string name="title_home">Home</string>
+    <string name="title_pets">Pets</string>
+    <string name="title_feedback">Feedback</string>
+    <string name="title_account">Account</string>
+    <string name="animal_dog">Dog</string>
+    <string name="animal_cat">Cat</string>
+    <string name="animal_bird">Bird</string>
+    <string name="animal_hamster">Hamster</string>
+    <string name="button_back">Back</string>
+    <string name="button_cart">Back</string>
+</resources>

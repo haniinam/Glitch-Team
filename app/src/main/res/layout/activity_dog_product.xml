@@ -1,0 +1,862 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Toolbar untuk tombol kembali -->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:background="@color/blue"
+            android:layout_gravity="start"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dog Product Category"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- View untuk bayangan di bawah Toolbar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/shadowcolor" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- CardView untuk memberi efek bayangan pada gambar -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="10dp"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp"
+                android:backgroundTint="@color/white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dog_product_description"
+                    android:adjustViewBounds="true"
+                    android:padding="5dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <!-- HorizontalScrollView untuk tombol kategori produk -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@color/gray">
+
+                    <!-- Button untuk All -->
+                    <Button
+                        android:id="@+id/buttonCatAll"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:text="All"
+                        android:textColor="@color/black"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/orange" />
+
+                    <!-- Button untuk Wet Food -->
+                    <Button
+                        android:id="@+id/buttonCatWetFood"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:text="Wet Food"
+                        android:textColor="@color/black"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/orange" />
+
+                    <!-- Button untuk Dry Food -->
+                    <Button
+                        android:id="@+id/buttonCatDryFood"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:text="Dry Food"
+                        android:textColor="@color/black"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/orange" />
+
+                    <!-- Button untuk Healthcare -->
+                    <Button
+                        android:id="@+id/buttonCatHealthcare"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:text="Healthcare"
+                        android:textColor="@color/black"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/orange" />
+
+                    <!-- Button untuk Accessories -->
+                    <Button
+                        android:id="@+id/buttonCatAccessories"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:text="Accessories"
+                        android:textColor="@color/black"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="@color/orange" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:paddingTop="16dp"
+                android:padding="8dp"
+                android:layout_gravity="center">
+
+                <!-- Contoh Produk 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk1"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_whiskas_oceanfish"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Whiskas Ocean Fish 400 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 25.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Contoh Produk 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk2"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_whiskas_pouch"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Whiskas Pouch Multipak Junior Beragam Rasa"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 84.000"
+                            android:textSize="12sp"
+                            android:textColor="#FF5722"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Tambahkan lebih banyak produk dengan struktur CardView yang sama untuk baris selanjutnya -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk3"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_whiskas_salmon"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Whiskas Mackarel and Salmon Flavour Adult 85 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 7.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk4"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_lifecat_kaleng"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Life Cat Kaleng Chicken and Salmon Adult 400 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 14.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk5"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_meo_oceanfish"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Me-O Ocean Fish in Jelly 80 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 7.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk6"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_royalcanin_gravy"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Royal Canin Kitten in Gravy 85 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 20.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk7"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_royalcanin_kaleng"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Royal Canin Kitten Loaf In Sauce Canned 85 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 50.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CWFProduk8"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/wetfood_meo_kaleng"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Me-O Seafood Platter in Prawn Jelly 400 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 20.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+                <!--DRY FOOD-->
+
+                <!-- Contoh Produk 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk1"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_meo_salmon"
+                            android:scaleType="centerCrop"
+                            android:padding="14dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Me-O Makanan Kucing Dewasa 7 kg - Salmon"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 276.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Contoh Produk 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk2"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_whiskas_indoor"
+                            android:scaleType="centerCrop"
+                            android:paddingTop="23dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Whiskas Dry Food Adult Indoor 1.1 kg"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 72.000"
+                            android:textSize="12sp"
+                            android:textColor="#FF5722"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Tambahkan lebih banyak produk dengan struktur CardView yang sama untuk baris selanjutnya -->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk3"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_bravery"
+                            android:scaleType="centerCrop"
+                            android:padding="13dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bravery Herring Adult Cat Sterilized"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 305.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk4"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_whiskas_skinandcoat"
+                            android:scaleType="centerCrop"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Whiskas Dry Food Skin and Coat 1.1 kg"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 82.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk5"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_happycat"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Happy Cat Minkas Perfect Mix Repack 1 kg"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 88.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk6"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_royalcanin"
+                            android:scaleType="centerCrop"
+                            android:padding="34dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Royal Canin Mother and Baby Cat 400 gr"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 60.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk7"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_catchoize"
+                            android:scaleType="centerCrop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cat Choize Adult - Tuna and Salmon 1.2 kg"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 65.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/CDFProduk8"
+                    android:layout_width="0dp"
+                    android:layout_height="260dp"
+                    android:layout_margin="8dp"
+                    android:layout_columnWeight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="#FFFFFF"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:src="@drawable/dryfood_minino"
+                            android:scaleType="centerCrop"
+                            android:padding="25dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Minino Kitten and Adult Cat 20 kg"
+                            android:textSize="14sp"
+                            android:textColor="#000000"
+                            android:layout_marginTop="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 504.000"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
